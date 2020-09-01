@@ -1,0 +1,53 @@
+$mobile-breakpoint: 425px;
+.header-panel{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    padding: 10px 0 10px 100px;
+    border-bottom: .5px solid rgba(33,37,44,.1);
+    .right-angle{
+        margin-top: 3px;
+        margin-left: 15px;
+        width: 12px;
+    }
+    .left-arrow{
+        margin-top: 5px;
+        margin-left: 15px;
+        width: 12px;
+    }
+    .dashboard-css{
+        margin:0 0 0 60px;
+    }
+    .social-feed-css{
+        margin-left: 10px;
+    }
+
+    
+
+}
+@media (min-width:$mobile-breakpoint) {
+    .button-menu{
+        display: none;
+    }
+}
+
+@media (max-width:$mobile-breakpoint) {
+.header-panel{
+    display: flex;
+    padding:10px;
+    .button-menu{
+        border: none;
+        background-color: white;
+        .bars-menu{
+            display: block;
+            margin-left: 100px;
+            justify-content:flex-end ;
+        }
+    }
+    
+    
+}
+  
+    
+}
