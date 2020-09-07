@@ -1,5 +1,7 @@
 $purpl:#6b0628;
 
+$mobile-breakpoint: 425px;
+
 .post-content{
     .post-info{
         display: flex;
@@ -31,5 +33,8 @@ $purpl:#6b0628;
         display: flex;
     width: 50%;
     margin: 0 0;
+    }
+    @media (max-width:$mobile-breakpoint) {
+        
     }
 }

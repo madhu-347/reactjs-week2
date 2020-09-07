@@ -27,25 +27,46 @@ $mobile-breakpoint: 425px;
 
 }
 @media (min-width:$mobile-breakpoint) {
-    .button-menu{
+    button{
         display: none;
     }
+    
 }
 
 @media (max-width:$mobile-breakpoint) {
 .header-panel{
     display: flex;
     padding:10px;
-    .button-menu{
+    button{
+        margin-left: 80px;
         border: none;
-        background-color: white;
-        .bars-menu{
-            display: block;
-            margin-left: 100px;
-            justify-content:flex-end ;
+        background: none;
+        li{
+            list-style: none;
         }
+        .button-menu{
+            border: none;
+            background-color: white;
+            .bars-menu{
+                display: block;
+                margin-left: 100px;
+                justify-content:flex-end ;
+            }
+        }
+        .hidden-menu{
+            display: block;
+            .hidden-tab{
+                display: none;
+            }
+            
+        }
+        .hidden-menu:hover{
+            .hidden-tab{
+                display: block;
+            }
     }
     
+    }
     
 }
   

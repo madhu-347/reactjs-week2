@@ -5,7 +5,6 @@ $mobile-breakpoint: 425px;
 .menu-bar-panel{
     height: 100%;
     position: fixed;
-    width: 20%;
     background-color: white;
     .name-plate{
         padding-top: 10px;
@@ -50,6 +49,17 @@ $mobile-breakpoint: 425px;
             font-weight: bolder;
         }
        
+    }
+}
+@media  (min-width:$mobile-breakpoint) {
+    .menu-bar-panel{
+    width: 20%;
+
+    }
+}
+@media  (max-width:$mobile-breakpoint) {
+    .menu-bar-panel{
+        right: 0px;
     }
 }
 

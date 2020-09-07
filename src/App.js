@@ -8,12 +8,15 @@ import DisplayPanel from './components/DisplayPanel/DisplayPanel';
 
 
 class App extends Component{
+ 
    render(){
      return( 
      <div>
         <Header />
         <div className="body-panel">
-        <MenuBarPanel />
+          <div className = "hidden-menu-bar-panel">
+            <MenuBarPanel />
+          </div>
         <DisplayPanel />
         </div>
       </div>

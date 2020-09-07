@@ -12,7 +12,6 @@ $mobile-breakpoint: 425px;
     align-items: center;
     background-color: #cfd4d2;
     .width-component{
-        max-width: 50%;
         min-width: 50%;
         border-radius: 10px;
         background-color: white;
@@ -74,6 +73,11 @@ $mobile-breakpoint: 425px;
         }
     }
     
+}
+@media (min-width:$mobile-breakpoint) {
+.width-component{
+   max-width: 50%;
+}
 }
 @media (max-width:$mobile-breakpoint) {
     .display-panel{

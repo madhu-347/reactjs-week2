@@ -7,9 +7,10 @@ $mobile-breakpoint: 425px;
     src: url(./assests/fonts/Poppins-Regular.ttf) ;
     font-weight: normal;
 }
+
 @media (max-width:$mobile-breakpoint) {
     .body-panel{
-        .menu-bar-desktop{
+        .hidden-menu-bar-panel{
             display: none;
         }
     }
@@ -21,14 +22,11 @@ $mobile-breakpoint: 425px;
     }
 body{
     font-family: Poppins;
-   
-    
-    
-    .body-panel{
+   .body-panel{
         display: flex;
         box-sizing: border-box;
         padding-top: 51px;
-        
+     
         
     }
 
