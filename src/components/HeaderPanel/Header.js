@@ -1,7 +1,6 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import './header.scss';
-import MenuBarPanel from '../menu-bar-panel/MenuBarPanel';
 const Header = () => {
     return(
         <div className=" header-panel">

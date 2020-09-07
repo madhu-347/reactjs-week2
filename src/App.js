@@ -1,8 +1,8 @@
 import React , { Component } from 'react';
 import './components/FontawesomeIcons';
-import Header from './components/header-panel/Header';
-import MenuBarPanel from './components/menu-bar-panel/MenuBarPanel';
-import DisplayPanel from './components/display-panel/DisplayPanel';
+import Header from './components/HeaderPanel/Header';
+import MenuBarPanel from './components/MenuBarPanel/MenuBarPanel';
+import DisplayPanel from './components/DisplayPanel/DisplayPanel';
 
 
 

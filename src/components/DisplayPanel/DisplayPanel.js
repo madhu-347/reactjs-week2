@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import ProfilePicture from '../profile-picture/ProfilePicture';
+import ProfilePicture from '../ProfilePicture/ProfilePicture';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import './display-panel.scss';
-import ParaGraph from '../paragraph/Paragraph';
+import ParaGraph from '../Paragraph/Paragraph';
 
 
  class DisplayPanel extends Component {
@@ -11,11 +11,9 @@ import ParaGraph from '../paragraph/Paragraph';
         this.state = {
             items: []
           };
-     
-        this.addBuzz = this.addBuzz.bind(this);
       }
        
-      addBuzz(e) {
+      addBuzz = (e) => {
         if (this.inputContent.value !== "") {
             var newBuzz = {
               text: this.inputContent.value,

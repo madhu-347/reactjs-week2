@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import './paragraph.scss';
-import ProfilePicture from '../profile-picture/ProfilePicture';
+import ProfilePicture from '../ProfilePicture/ProfilePicture';
 
 
 

@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import profile from '../../assests/images/profile.png';
-import '../profile-picture/profile-picture.scss';
+import './profile-picture.scss';
 
  class ProfilePicture extends Component{
      render(){
