@@ -16,14 +16,14 @@ class Header extends Component
                  <FontAwesomeIcon className="left-arrow" icon="arrow-left" /> <p className="dashboard-css">Dashboard</p>
                  <FontAwesomeIcon className="right-angle" icon="angle-right" /> 
                  <p className="social-feed-css"><strong>Social Feed</strong></p>
-                 <button onClick = {this.showMenu}>
+                 <button className= "button" onClick = {this.showMenu}>
                  <li className="hidden-menu">
                      <FontAwesomeIcon className="bars-menu" icon="bars" />
                      {this.state.menu ? (
-                     <div className="hidden-tab"><MenuBarPanel /></div>
-                     ):(
-                         <div></div>
-                     )}
+                      <div className="hidden-tab"><MenuBarPanel /></div>
+                      ):(
+                        <div></div>
+                        )}
                      
                      </li>
                  </button>

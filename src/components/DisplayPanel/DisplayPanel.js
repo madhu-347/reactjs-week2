@@ -13,7 +13,7 @@ import ParaGraph from '../Paragraph/Paragraph';
           };
       }
        
-      addBuzz = (e) => {
+      addBuzz = (value) => {
         if (this.inputContent.value !== "") {
             var newBuzz = {
               text: this.inputContent.value,
@@ -28,10 +28,7 @@ import ParaGraph from '../Paragraph/Paragraph';
            
             this.inputContent.value = "";
           }
-           
-          console.log(this.state.items);
-             
-          e.preventDefault();
+          value.preventDefault();
      
       }
      render(){
@@ -56,6 +53,7 @@ import ParaGraph from '../Paragraph/Paragraph';
                     
                 </div>
             </div>
+            <div className= "display-card">
             <div className="post-content  width-component">
                     <div className="post-info">
                         <div className="profile-image profile-border-color">
@@ -72,6 +70,8 @@ import ParaGraph from '../Paragraph/Paragraph';
                 </div>
               <ParaGraph entries={this.state.items} />
               
+            </div>
+            
               </div>
             
            

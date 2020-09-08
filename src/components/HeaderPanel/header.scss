@@ -27,7 +27,7 @@ $mobile-breakpoint: 425px;
 
 }
 @media (min-width:$mobile-breakpoint) {
-    button{
+    .button{
         display: none;
     }
     
@@ -37,7 +37,7 @@ $mobile-breakpoint: 425px;
 .header-panel{
     display: flex;
     padding:10px;
-    button{
+    .button{
         margin-left: 80px;
         border: none;
         background: none;

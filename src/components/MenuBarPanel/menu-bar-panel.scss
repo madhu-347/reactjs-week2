@@ -60,6 +60,7 @@ $mobile-breakpoint: 425px;
 @media  (max-width:$mobile-breakpoint) {
     .menu-bar-panel{
         right: 0px;
-    }
+        width: 50%;
+     }
 }
 
