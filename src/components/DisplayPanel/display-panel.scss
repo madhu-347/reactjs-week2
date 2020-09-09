@@ -3,6 +3,8 @@ $bg-color: #cfd4d2;
 $mobile-breakpoint: 425px;
 
 .display-panel{
+    width: 100%;
+    padding-bottom: 100px;
     padding-left: 20%;
     display: flex;
     padding-top: 10px;
@@ -19,6 +21,7 @@ $mobile-breakpoint: 425px;
         box-shadow: 0 1px 4px #706c6c;
         margin: 20px auto 0 auto;
     }
+    
     .posting-panel{
         box-sizing: border-box;
         display: flex;
@@ -30,11 +33,29 @@ $mobile-breakpoint: 425px;
             padding: 10px;
             border-radius: 20px;
         }
+        textarea:focus{
+            outline:none;
+         }
         
         .posting-panel-line-left{
             padding-left: 10px;
             padding-right: 20px;
             width: 100%;
+            .submit-button:focus{
+                outline:none;
+            }
+            .submit-button{
+                border-radius: 10px;
+                border: 1px solid black;
+
+            }
+            .submit-button:hover{
+                border: 1px solid transparent;
+                border-radius: 10px;
+                color: white;
+                background-color: $purpl;
+
+            }
             .posting-panel-line2-left{
                 display: flex;
                 justify-content: space-between;
@@ -48,6 +69,9 @@ $mobile-breakpoint: 425px;
             }
         }
       }
+      .display-card{
+        width: 100%;
+    
     .post-content{
         .post-info{
             display: flex;
@@ -72,7 +96,7 @@ $mobile-breakpoint: 425px;
             width: 80%;
         }
     }
-    
+}
 }
 @media (min-width:$mobile-breakpoint) {
 .width-component{
@@ -81,6 +105,7 @@ $mobile-breakpoint: 425px;
 }
 @media (max-width:$mobile-breakpoint) {
     .display-panel{
+       
         padding: 10px;
         .width-component{
             width: 90%;

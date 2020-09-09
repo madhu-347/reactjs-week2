@@ -6,17 +6,17 @@ import ProfilePicture from '../ProfilePicture/ProfilePicture';
 
 
 class ParaGraph extends Component{
-    createTasks(buzz) {
+    createTasks(buzz,key) {
         return (
-            <div  key={buzz.key}  className="post-content  width-component">
+            <div  key={key}  className="post-content  width-component">
             <div className="post-info">
                 <div className="profile-image profile-border-color">
                     <ProfilePicture />
                 </div>
                 <div className="profile-name">
-                    <h4>Oslo</h4>
-                    <h5>Magaging Expert</h5>
-                    <h6>1d</h6>
+                    <h4>{buzz.name}</h4>
+                    <h5>{buzz.profile}</h5>
+                    <h6>{buzz.time}</h6>
                 </div>
             </div>
         
@@ -26,7 +26,7 @@ class ParaGraph extends Component{
       }
       render() {
         var BuzzEntries = this.props.entries;
-        var BuzzContent = BuzzEntries.map(this.createTasks);
+        var BuzzContent = BuzzEntries.map(this.createTasks)
      
         return (
             <div>{BuzzContent}</div>

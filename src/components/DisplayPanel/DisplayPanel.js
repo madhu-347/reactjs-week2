@@ -3,8 +3,9 @@ import ProfilePicture from '../ProfilePicture/ProfilePicture';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import './display-panel.scss';
 import ParaGraph from '../Paragraph/Paragraph';
+const moment = require("moment");
 
-
+var m = moment();
  class DisplayPanel extends Component {
   contentData;
     constructor(props) {
@@ -16,11 +17,14 @@ import ParaGraph from '../Paragraph/Paragraph';
       }
       
       addBuzz = (value) => {
-        localStorage.setItem('content',JSON.stringify(this.state));
+       
         if (this.inputContent.value !== "") {
             var newBuzz = {
+              name: "Oslo",
+              profile:"Managing Expert",
               text: this.inputContent.value,
-              key: Date.now()
+              time: m.from(moment())
+               
             };
          
             this.setState((prevState) => {
@@ -31,13 +35,14 @@ import ParaGraph from '../Paragraph/Paragraph';
            
             this.inputContent.value = "";
           }
-          
           value.preventDefault();
-     
+          localStorage.setItem('content',JSON.stringify(this.state));
       };
       
       componentDidMount() {
         this.documentData = JSON.parse(localStorage.getItem('content'));
+        
+       
      
        
     }
@@ -52,7 +57,7 @@ import ParaGraph from '../Paragraph/Paragraph';
                 <div className="posting-panel-line-left">
                 <form onClick={this.addBuzz} >
                     <textarea  ref={(a) => this.inputContent = a}  placeholder="Share something here..."/>
-                    <button type="submit" >Submit</button>
+                    <button className = "submit-button" type="submit" >Submit</button>
                     <div className="posting-panel-line2-left">
                       <span><FontAwesomeIcon icon="video" />  Any attachment</span>
                       <span><FontAwesomeIcon icon="camera" />  Capture it</span>
@@ -64,22 +69,7 @@ import ParaGraph from '../Paragraph/Paragraph';
                 </div>
             </div>
             <div className= "display-card">
-            <div className="post-content  width-component">
-                    <div className="post-info">
-                        <div className="profile-image profile-border-color">
-                            <ProfilePicture />
-                        </div>
-                        <div className="profile-name">
-                            <h4>Oslo</h4>
-                            <h5>Manager Expert</h5>
-                            <h6>1d</h6>
-                        </div>
-                    </div>
-                
-                <p className="post-para"> Unlike with many sleep medications, with melatonin you are unlikely to become dependent, have a diminished response after repeated use (habituation), or experience a hangover effect</p>
-                </div>
               <ParaGraph entries={this.state.items} />
-              
             </div>
             
               </div>

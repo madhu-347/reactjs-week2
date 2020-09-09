@@ -37,6 +37,9 @@ $mobile-breakpoint: 425px;
 .header-panel{
     display: flex;
     padding:10px;
+    button:focus{
+        outline: none;
+    }
     .button{
         margin-left: 80px;
         border: none;
