@@ -6,14 +6,17 @@ import ParaGraph from '../Paragraph/Paragraph';
 
 
  class DisplayPanel extends Component {
+  contentData;
     constructor(props) {
         super(props);
+        
         this.state = {
             items: []
           };
       }
-       
+      
       addBuzz = (value) => {
+        localStorage.setItem('content',JSON.stringify(this.state));
         if (this.inputContent.value !== "") {
             var newBuzz = {
               text: this.inputContent.value,
@@ -28,9 +31,16 @@ import ParaGraph from '../Paragraph/Paragraph';
            
             this.inputContent.value = "";
           }
+          
           value.preventDefault();
      
-      }
+      };
+      
+      componentDidMount() {
+        this.documentData = JSON.parse(localStorage.getItem('content'));
+     
+       
+    }
      render(){
          return(
             <div className="display-panel">
@@ -40,7 +50,7 @@ import ParaGraph from '../Paragraph/Paragraph';
                 </div>
                     
                 <div className="posting-panel-line-left">
-                <form onClick={this.addBuzz}>
+                <form onClick={this.addBuzz} >
                     <textarea  ref={(a) => this.inputContent = a}  placeholder="Share something here..."/>
                     <button type="submit" >Submit</button>
                     <div className="posting-panel-line2-left">
