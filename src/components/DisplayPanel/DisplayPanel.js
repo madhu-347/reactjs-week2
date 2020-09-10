@@ -40,7 +40,7 @@ var m = moment();
       };
       
       componentDidMount() {
-        this.documentData = JSON.parse(localStorage.getItem('content'));
+        this.data = JSON.parse(localStorage.getItem('content'));
         
        
      
