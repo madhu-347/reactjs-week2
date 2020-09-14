@@ -4,13 +4,11 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import './display-panel.scss';
 import ParaGraph from '../Paragraph/Paragraph';
 const moment = require("moment");
-
 var m = moment();
  class DisplayPanel extends Component {
-  contentData;
-    constructor(props) {
+   data;
+  constructor(props) {
         super(props);
-        
         this.state = {
             items: []
           };
@@ -36,16 +34,28 @@ var m = moment();
             this.inputContent.value = "";
           }
           value.preventDefault();
-          localStorage.setItem('content',JSON.stringify(this.state));
+          localStorage.setItem('content',JSON.stringify(this.state))
       };
       
-      componentDidMount() {
-        this.data = JSON.parse(localStorage.getItem('content'));
-        
-       
      
-       
-    }
+      componentDidMount(){
+        this.data = JSON.parse(localStorage.getItem('content'));
+      
+        
+        if (localStorage.getItem('content')) {
+          this.setState({
+              items : this.data
+      })
+  } else {
+      this.setState({
+          items : []
+      })
+  }
+}
+       componentDidUpdate(){
+        localStorage.setItem('content',JSON.stringify(this.state.items))
+       }
+      
      render(){
          return(
             <div className="display-panel">
