@@ -31,7 +31,7 @@ class ParaGraph extends Component{
         
      
         return (
-            <div>{BuzzEntries}</div>
+            <div className = "buzz-entries">{BuzzEntries}</div>
         );
       }
 }
