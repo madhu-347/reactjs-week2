@@ -34,15 +34,15 @@ var m = moment();
             this.inputContent.value = "";
           }
           value.preventDefault();
-          sessionStorage.setItem('content',JSON.stringify(this.state))
+          localStorage.setItem('content',JSON.stringify(this.state))
       };
       
      
       componentDidMount(){
-        this.data = JSON.parse(sessionStorage.getItem('content'));
+        this.data = JSON.parse(localStorage.getItem('content'));
       
         
-        if (sessionStorage.getItem('content')) {
+        if (localStorage.getItem('content')) {
           this.setState({
               items : this.data
       })
@@ -53,7 +53,7 @@ var m = moment();
   }
 }
        componentDidUpdate(){
-        sessionStorage.setItem('content',JSON.stringify(this.state.items))
+        localStorage.setItem('content',JSON.stringify(this.state.items))
        }
       
      render(){
